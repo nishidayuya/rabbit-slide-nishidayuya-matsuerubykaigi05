@@ -18,7 +18,7 @@
 = 他人のふんど^h^h^h Cookbook
 
 * （程度の差はあるけど）よく作り込まれているものが多い．
-* Node Objectに書くだけで動く．
+* Node Objectに書くだけでインストール・設定できる．
 * 追加Resourceが使えるようになる．
 * クロスプラットホームで同じように書ける．Debian系とRedHat系とか
 
@@ -32,7 +32,7 @@
 = database
 
 * 各種RDBMSのためのCookbook
-* データベースの作成とかデータベースユーザの作成とか
+* データベースの作成 (database Resource)
 
     database "redmine_production" do
       provider Chef::Provider::Database::Postgresql
@@ -45,7 +45,7 @@
 = database
 
 * 各種RDBMSのためのCookbook
-* データベースの作成とかデータベースユーザの作成とか
+* データベースユーザの作成 (database_user Resource)
 
     database_user "redmine" do
       provider Chef::Provider::Database::PostgresqlUser
@@ -58,13 +58,13 @@
 = rbenv
 = rbenv
 
-* Chef社が出しているもの ((*じゃない*)) やつがよく作り込まれてて便利
-    # Berksfile
-    cookbook "rbenv", github: "fnichol/chef-rbenv", tag: "v0.7.2"
 * やれること
   * rbenvそのもののインストールやruby-buildによるrubyのインストール
   * rbenvで管理しているRubyにgemをインストール
   * ユーザごとにrbenvインストール
+* Chef社が出しているもの ((*じゃない*)) ものが特に便利
+    # Berksfile
+    cookbook "rbenv", github: "fnichol/chef-rbenv"
 
 = rbenv
 
@@ -81,7 +81,7 @@
 = build-essential
 
 * Cのコンパイル環境が必要な場合はこのCookbook
-  * rubyをビルド・インストールするとき
+  * rubyをビルドするとき
   * 拡張ライブラリが入ったgemをインストールするとき
   * その他もろもろ
 
@@ -99,9 +99,10 @@
 = gem_binary
 = gem_binary
 
-* Chefのdebパッケージに同梱されているrubyのためのgem ((*じゃない*)) gemコマンドでgemを操作する際に使用する．
-  * 他人のCookbookでgemがインストールされるときに使ったりする．
-  * 自分のCookbookであればrbenv Cookbookのrbenv_gem Resourceを使えばいいでしょう．
+* 他人のCookbookでgemがインストールされるときに使うgemコマンドのパスを指定するのに使ったりする．
+* 通常（使わないとき）はChefが動作するときのRubyが使うgemにインストールされる．
+  * debパッケージでChefを入れた場合はdebパッケージに同梱されているgemにインストールされる．
+* 自分のCookbookであればrbenv Cookbookのrbenv_gem Resourceを使えばいいでしょう．
 
 = gem_binary
 
@@ -121,7 +122,7 @@
   * locale-gen ロカールの生成
   * locales 設定変更
 * ロカールがen-USになっているときにja_JP.UTF-8にするために使用する．
-  * VeeWeeとかPackerとかで自前でVagrantのBoxを作る場合はそこで設定すれば不要
+  * 例えばどこかから拾ってきたVagrantのBoxがen-USになっているときとか．
 
 = ロカール関連
 
