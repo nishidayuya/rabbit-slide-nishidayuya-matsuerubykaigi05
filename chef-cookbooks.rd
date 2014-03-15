@@ -9,12 +9,20 @@
 : allotted-time
   5m
 
+= 自己紹介
+
+= 仕事はRubyとJavaScript
+= 趣味
+= Chefとか
+= Vagrantとか
+= その辺で遊んでいます
+
 = Chef使っている人
 
+= サーバ構成変更ツール
 = 他人のCookbook
-
-= 使ってます?
-
+= で
+= 楽できる
 = 他人のふんど^h^h^h Cookbook
 
 * （程度の差はあるけど）よく作り込まれているものが多い．
@@ -23,9 +31,7 @@
 * クロスプラットホームで同じように書ける．Debian系とRedHat系とか
 
 = いくつか
-
 = 便利なCookbookの
-
 = 紹介
 
 = database
@@ -88,7 +94,7 @@
 = build-essential
 
 * Cのコンパイル環境が必要なCookbookで依存していることが多いCookbook．
-* gccやmakeが ((*早い*)) 段階で必要な場合は次のような指定をするとよい．
+* gccやmakeが ((*早い*)) 段階で必要な場合は次のような指定を行う．
     # nodes/HOST.json
     ...
       "build_essential": {
