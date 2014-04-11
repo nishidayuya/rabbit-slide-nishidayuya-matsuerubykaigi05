@@ -4,7 +4,8 @@ base_name: chef_cookbooks
 tags: []
 presentation_date: 
 version: 2014.03.15.0
-licenses: []
+licenses:
+- CC BY-SA 2.1 JP
 slideshare_id: 
 speaker_deck_id: 
 ustream_id: 
