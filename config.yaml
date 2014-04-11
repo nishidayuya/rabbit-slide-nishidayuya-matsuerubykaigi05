@@ -4,7 +4,7 @@ base_name: chef_cookbooks
 tags:
 - chef
 - provisioning
-presentation_date: 
+presentation_date: 2014-03-15
 version: 2014.03.15.0
 licenses:
 - CC BY-SA 2.1 JP
