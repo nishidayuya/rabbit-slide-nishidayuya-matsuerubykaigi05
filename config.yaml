@@ -1,7 +1,9 @@
 ---
 id: matsuerubykaigi05
 base_name: chef_cookbooks
-tags: []
+tags:
+- chef
+- provisioning
 presentation_date: 
 version: 2014.03.15.0
 licenses:
