@@ -156,13 +156,4 @@
 * README.mdに使い方書いてあるし，なかったらrecipe/default.rbとかを読めばおk
 * 自分の管理ポリシーに合わせられなかったら合うように修正してより汎用的にできたらpull-requestしましょう．
 
-#= まとめ
-
 = ご静聴ありがとうございました
-
-# = cron
-# 
-# # https://github.com/opscode-cookbooks/cron
-# = etckeeper
-# = iptables_pot
-# = apache2
